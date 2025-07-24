@@ -1,33 +1,58 @@
 package com.lloyd.Mini_Library_System.Entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
+@Entity
 public class Author {
 
     //primary key
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
 
-    @Table()
+    @Column(name ="first_name")
     private String firstName;
 
 
-    @Table()
+    @Column(name = "last_name")
     private String lastName;
 
+
+    @Column(name = "birthyear")
     private int birthYear;
 
 
     public Author(){}
 
-    public Author(long id, String name, int birthYear){
-        this.id = id;
-        this.name = name;
+    public Author(String firstName, String lastName, int birthYear) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.birthYear = birthYear;
+    }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public int getBirthYear() {
@@ -36,30 +61,5 @@ public class Author {
 
     public void setBirthYear(int birthYear) {
         this.birthYear = birthYear;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    @Override
-    public String toString() {
-        return "Author{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", birthYear=" + birthYear +
-                '}';
     }
 }
