@@ -3,10 +3,8 @@ package com.lloyd.Mini_Library_System.RestController;
 
 import com.lloyd.Mini_Library_System.Entity.Author;
 import com.lloyd.Mini_Library_System.Services.AuthorService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import jakarta.transaction.Transactional;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -33,5 +31,23 @@ public class AuthorController {
         return authorService.findById(id);
     }
 
+    //add author
+    @PostMapping("/authors")
+    public Author addAuthor(@RequestBody Author author){
+        return authorService.save(author);
+    }
 
+    //update author
+    @PutMapping("/authors")
+    public Author updateAuthor(@RequestBody Author author){
+        return authorService.save(author);
+    }
+
+
+    //delete author by id
+    @DeleteMapping("/authors/{id}")
+    public String deleteAuthor(@PathVariable int id){
+        authorService.deleteById(id);
+        return "Author delete with ID: " + id;
+    }
 }
