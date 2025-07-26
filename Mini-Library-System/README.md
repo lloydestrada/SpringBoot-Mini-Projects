@@ -61,9 +61,9 @@ A simple RESTful API to manage books and authors using Java, Spring Boot, and My
 
 ---
 
-## 🧪 Sample POST JSON
+## Sample POST JSON
 
-### ➕ Create an Author
+### Create an Author
 ```json
 {
   "firstName": "George",
