@@ -11,7 +11,7 @@ A simple RESTful API to manage books and authors using Java, Spring Boot, and My
 - Spring Data JPA
 - MySQL
 - RESTful APIs
-- Postman (for testing)
+- Postman
 
 
 ---
