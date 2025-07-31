@@ -8,6 +8,9 @@ public class Student {
     //add field for country selection
     private String country;
 
+    //add field for programming language
+    private String favoriteLanguage;
+
     //no-argue constructor
     public Student(){};
 
@@ -33,5 +36,13 @@ public class Student {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public String getFavoriteLanguage() {
+        return favoriteLanguage;
+    }
+
+    public void setFavoriteLanguage(String favoriteLanguage) {
+        this.favoriteLanguage = favoriteLanguage;
     }
 }

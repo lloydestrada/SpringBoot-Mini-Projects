@@ -19,6 +19,9 @@ public class StudentController {
     @Value("${countries}")
     private List<String> countries;
 
+    //inject programming languages from properties
+    @Value("${languages}")
+    private List<String> languages;
 
     //show form
     @GetMapping("/showStudentForm")
@@ -33,6 +36,9 @@ public class StudentController {
 
         //add list of countries to the model
         theModel.addAttribute("countries", countries);
+
+        //add list for favorite languages of the user
+        theModel.addAttribute("languages", languages);
 
         return "student-form";
     }
