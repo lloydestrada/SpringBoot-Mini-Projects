@@ -1,5 +1,7 @@
 package com.lloyd.springboot.thymeleafdemo.model;
 
+import java.util.List;
+
 public class Student {
 
     private String firstName;
@@ -10,6 +12,10 @@ public class Student {
 
     //add field for programming language
     private String favoriteLanguage;
+
+    //add favorite operating systems checkbox
+    private List<String> favoriteSystems;
+
 
     //no-argue constructor
     public Student(){};
@@ -44,5 +50,13 @@ public class Student {
 
     public void setFavoriteLanguage(String favoriteLanguage) {
         this.favoriteLanguage = favoriteLanguage;
+    }
+
+    public List<String> getFavoriteSystems() {
+        return favoriteSystems;
+    }
+
+    public void setFavoriteSystems(List<String> favoriteSystems) {
+        this.favoriteSystems = favoriteSystems;
     }
 }
