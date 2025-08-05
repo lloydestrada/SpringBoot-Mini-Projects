@@ -18,7 +18,7 @@ Users can submit customer information through a web form, and the application va
 
 ---
 
-## Technologies Used
+## Technologies
 - **Spring Boot** – Application framework
 - **Spring MVC** – Web framework
 - **Thymeleaf** – Template engine for server-side rendering
