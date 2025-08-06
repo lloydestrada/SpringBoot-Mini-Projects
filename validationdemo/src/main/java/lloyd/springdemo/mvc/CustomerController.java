@@ -43,7 +43,7 @@ public class CustomerController {
 
     }
 
-    //add initbinder to convert trim input string
+    //add @Initbinder annotation to convert trim input string
     //remove whitespace validation
     @InitBinder
     public void initBinder(WebDataBinder webDataBinder){
