@@ -1,0 +1,22 @@
+package lloyd.springdemo.mvc.validation;
+
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
+
+public class CourseCodeConstraintValidator implements ConstraintValidator<CourseCode, String> {
+
+    //add prefix
+    public String coursePrefix;
+    @Override
+    public void initialize(CourseCode TheCourseCode) {
+        coursePrefix = TheCourseCode.value();
+    }
+
+    @Override
+    public boolean isValid(String theCode, ConstraintValidatorContext constraintValidatorContext) {
+
+        boolean result = theCode.startsWith(coursePrefix);
+
+        return false;
+    }
+}
