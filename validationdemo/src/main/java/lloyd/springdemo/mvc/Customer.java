@@ -24,7 +24,7 @@ public class Customer {
     private String postalCode;
 
     //create field for courseCode
-    @CourseCode
+    @CourseCode(value = "TOPS", message = "must start with TOPS")
     private String courseCode;
 
     public String getFirstName() {
