@@ -14,6 +14,7 @@ public class Customer {
     private String lastName = "";
 
     //add a number range
+    //putting validation with range
     @NotNull(message = "is required")
     @Min(value = 0, message="must be greater than 0")
     @Max(value = 10, message="must be equal or less than 10")
