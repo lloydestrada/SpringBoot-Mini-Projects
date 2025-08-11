@@ -42,7 +42,7 @@ public class EmployeeController {
         //create new model to bind form data
         Employee theEmployee = new Employee();
 
-        theModel.addAttribute("employees", theEmployee);
+        theModel.addAttribute("employee", theEmployee);
 
         return "employees/employee-form";
     }
@@ -58,6 +58,7 @@ public class EmployeeController {
         return "redirect:/employees/list";
     }
 
+
     @GetMapping("showUpdateForm")
     public String showUpdateForm(@RequestParam("employeeId") int theId,Model theModel){
 
@@ -69,5 +70,16 @@ public class EmployeeController {
 
         //send over to the form
         return "employees/employee-form";
+    }
+
+    //add mapping for delete
+    @GetMapping("/delete")
+    public String delete(@RequestParam("employeeId") int theId){
+
+        //delete the employee
+        employeeService.deleteById(theId);
+
+        //redirect to the main page
+        return "redirect:/employees/list";
     }
 }
