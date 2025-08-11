@@ -58,7 +58,7 @@ public class EmployeeController {
         return "redirect:/employees/list";
     }
 
-
+    //add mapping for showing the update form
     @GetMapping("showUpdateForm")
     public String showUpdateForm(@RequestParam("employeeId") int theId,Model theModel){
 

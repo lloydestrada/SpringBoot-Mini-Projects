@@ -3,7 +3,7 @@
 A simple CRUD (Create, Read, Update, Delete) web application built with **Spring Boot**, **Spring Data JPA**, and **Thymeleaf**.  
 
 
-The application allows users to manage employee records using Bootstrap UI.
+The application allows users to manage employee information using Bootstrap UI.
 
 ---
 
