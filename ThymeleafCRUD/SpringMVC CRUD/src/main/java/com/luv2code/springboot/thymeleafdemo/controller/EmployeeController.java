@@ -33,7 +33,19 @@ public class EmployeeController {
         //add the spring model
         theModel.addAttribute("employees", theEmployees);
 
-        return "list-employees";
+        return "employees/list-employees";
+    }
+
+    //add mapping for an adding a form
+    @GetMapping("/showAddForm")
+    public String showAddForm(Model theModel){
+
+        //create new model to bind form data
+        Employee theEmployee = new Employee();
+
+        theModel.addAttribute("employee", theEmployee);
+
+        return "employees/employee-form";
     }
 
 }
